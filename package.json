@@ -1,0 +1,28 @@
+{
+  "name": "airport-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "downshift": "^1.22.5",
+    "node-sass-chokidar": "0.0.3",
+    "npm-run-all": "^4.1.2",
+    "react": "^16.2.0",
+    "react-bootstrap": "^0.31.5",
+    "react-bootstrap-typeahead": "^2.0.2",
+    "react-dom": "^16.2.0",
+    "react-google-maps": "^9.4.3",
+    "react-scripts": "1.0.17",
+    "react-typeahead": "^2.0.0-alpha.7",
+    "superagent": "^3.8.2"
+  },
+  "scripts": {
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build-js": "react-scripts build",
+    "build": "npm-run-all build-css build-js",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
